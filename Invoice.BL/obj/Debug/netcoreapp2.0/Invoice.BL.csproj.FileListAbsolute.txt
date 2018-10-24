@@ -1,9 +1,0 @@
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\bin\Debug\netcoreapp2.0\Invoice.BL.deps.json
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\bin\Debug\netcoreapp2.0\Invoice.BL.dll
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\bin\Debug\netcoreapp2.0\Invoice.BL.pdb
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\obj\Debug\netcoreapp2.0\Invoice.BL.csprojAssemblyReference.cache
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\obj\Debug\netcoreapp2.0\Invoice.BL.csproj.CoreCompileInputs.cache
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\obj\Debug\netcoreapp2.0\Invoice.BL.AssemblyInfoInputs.cache
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\obj\Debug\netcoreapp2.0\Invoice.BL.AssemblyInfo.cs
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\obj\Debug\netcoreapp2.0\Invoice.BL.dll
-H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.BL\obj\Debug\netcoreapp2.0\Invoice.BL.pdb

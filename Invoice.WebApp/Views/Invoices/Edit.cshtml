@@ -1,0 +1,139 @@
+﻿@model Invoice.WebApp.ViewModels.InvoicesViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit invoice</h2>
+
+<form asp-controller="Invoices" asp-action="Edit" class="form-horizontal form-label-left">
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" type="text" class="form-control">
+            <span asp-validation-for="Description"></span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="DueDate"></label>
+            <input asp-for="DueDate" type="text" class="form-control">
+            <span asp-validation-for="DueDate"></span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Partner"></label>
+            @Html.DropDownListFor(model => model.PartnerId, new SelectList(ViewBag.Partners, "Id", "Name"), new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-4 col-xs-12">
+            <label asp-for="PaymentType"></label>
+            @Html.DropDownListFor(x => x.PaymentType,
+                                                 new SelectList(Enum.GetNames(typeof(Invoice.BL.Models.PaymentType))),
+                                                 new { @class = "form-control" }
+                                             )
+        </div>
+        <div class="col-md-4 col-xs-12">
+            <label asp-for="BankAccount"></label>
+            <input asp-for="BankAccount" type="text" class="form-control">
+            <span asp-validation-for="BankAccount"></span>
+        </div>
+        <div class="col-md-4 col-xs-12">
+            <label asp-for="PaymentStatus"></label>
+            @Html.DropDownListFor(x => x.PaymentStatus,
+                                                 new SelectList(Enum.GetNames(typeof(Invoice.BL.Models.PaymentStatus))),
+                                                 new { @class = "form-control" }
+                                             )
+        </div>
+    </div>
+
+    <div class="row form-group" style="margin-top: 30px;">
+        <div class="col-md-6 col-xs-6 text-left">
+            <a asp-action="Index" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                Return
+            </a>
+        </div>
+        <div class="col-md-6 col-xs-6 text-right">
+            <button type="submit" class="btn btn-success">Save invoice</button>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr class="borderless">
+                    <th scope="col" colspan="5">
+                        <h3>Invoice items</h3>
+                    </th>
+                    <th scope="col" class="text-right">
+                        <a asp-action="Create" asp-controller="InvoiceItems" asp-route-invoiceId="@Model.Id" style="position: relative;" title="Add invoice">
+                            Add invoice item
+                            <span style="position: relative; top: 2px;" class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col"><label asp-for="InvoiceItems[0].Name"></label></th>
+                    <th scope="col" class="text-right"><label asp-for="InvoiceItems[0].Amount"></label></th>
+                    <th scope="col" class="text-right"><label asp-for="InvoiceItems[0].Quantity"></label></th>
+                    <th scope="col"><label asp-for="InvoiceItems[0].Unit"></label></th>
+                    <th scope="col" class="text-right"><label asp-for="InvoiceItems[0].TotalAmount"></label></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.InvoiceItems.Count() == 0)
+                {
+                    <tr>
+                        <td colspan="6">Add new invoice item to see table content.</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var item in Model.InvoiceItems.Where(a => a.Status == Invoice.BL.Models.InvoiceItemStatus.Active))
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td class="text-right">@Html.DisplayFor(model => item.Amount)</td>
+                            <td class="text-right">@item.Quantity</td>
+                            <td>@item.Unit</td>
+                            <td class="text-right">@Html.DisplayFor(model => item.TotalAmount)</td>
+                            <td class="text-right">
+                                <form asp-action="Delete" asp-controller="InvoiceItems" method="post">
+                                    <input type="hidden" name="Id" value="@item.Id" />
+                                    <input type="hidden" name="invoiceId" value="@Model.Id" />
+                                    <button type="submit" onclick="return confirm('Are you sure you wish to delete this invoice item?');" class="btn-link">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <label>Total</label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">
+                        @Html.DisplayFor(model => model.InvoicedAmount)
+                    </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

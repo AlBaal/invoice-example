@@ -1,0 +1,17 @@
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\bin\Debug\netcoreapp2.1\Invoice.GraphQL.deps.json
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\bin\Debug\netcoreapp2.1\Invoice.GraphQL.runtimeconfig.json
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\bin\Debug\netcoreapp2.1\Invoice.GraphQL.runtimeconfig.dev.json
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\bin\Debug\netcoreapp2.1\Invoice.GraphQL.dll
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\bin\Debug\netcoreapp2.1\Invoice.GraphQL.pdb
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\bin\Debug\netcoreapp2.1\Invoice.DataAccess.dll
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\bin\Debug\netcoreapp2.1\Invoice.DataAccess.pdb
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.csprojAssemblyReference.cache
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.csproj.CoreCompileInputs.cache
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.RazorAssemblyInfo.cache
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.RazorAssemblyInfo.cs
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.AssemblyInfoInputs.cache
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.AssemblyInfo.cs
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.RazorTargetAssemblyInfo.cache
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.csproj.CopyComplete
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.dll
+H:\jakub\Documents\Visual Studio 2017\Projects\Invoice\Invoice.GraphQL\obj\Debug\netcoreapp2.1\Invoice.GraphQL.pdb

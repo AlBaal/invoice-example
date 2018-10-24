@@ -1,0 +1,86 @@
+﻿@model Invoice.WebApp.ViewModels.InvoicesIndexViewModel
+
+
+<div class="row">
+    <div class="col-md-10">
+        
+    </div>
+    <div class="col-md-2 text-right">
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr class="borderless">
+                    <th scope="col" colspan="5">
+                        <h2>Your Invoices</h2>
+                    </th>
+                    <th scope="col" class="text-right">
+                        <a asp-action="Create" data-toggle="tooltip" style="position: relative;" title="Add invoice">
+                            Add invoice
+                            <span style="position: relative; top: 2px;" class="glyphicon glyphicon-plus-sign"></span>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col"><label asp-for="Invoices[0].Description"></label></th>
+                    <th scope="col"><label asp-for="Invoices[0].Partner"></label></th>
+                    <th scope="col"><label asp-for="Invoices[0].PaymentStatus"></label></th>
+                    <th scope="col" class="text-right"><label asp-for="Invoices[0].DueDate"></label></th>
+                    <th scope="col" class="text-right"><label asp-for="Invoices[0].InvoicedAmount"></label></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Invoices.Count() == 0)
+                {
+                    <tr>
+                        <td colspan="6">Add new invoice to see table content.</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var item in Model.Invoices.OrderByDescending(a => a.DueDate))
+                    {
+                        <tr>
+                            <td>@item.Description</td>
+                            <td>@item.Partner?.Name</td>
+                            <td>@item.PaymentStatus</td>
+                            <td class="text-right">@Html.DisplayFor(model => item.DueDate)</td>
+                            <td class="text-right">@Html.DisplayFor(model => item.InvoicedAmount)</td>
+                            <td class="text-right">
+                                <a asp-action="Edit" asp-route-id="@item.Id" style="margin: 0 5px;">
+                                    <span class="glyphicon glyphicon-edit" />
+                                </a>
+                                @using (Html.BeginForm("Delete", "Invoices", FormMethod.Post, new { @class = "delete-form" }))
+                                {
+                                    <input type="hidden" name="Id" value="@item.Id" />
+                                    <button type="submit" onclick="return confirm('Are you sure you wish to delete this invoice?');" class="btn-link">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <label>Total</label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">
+                        @Html.DisplayFor(model => model.TotalAmount)
+                    </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+

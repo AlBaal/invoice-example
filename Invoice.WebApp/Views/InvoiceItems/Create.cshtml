@@ -1,0 +1,55 @@
+﻿@model Invoice.WebApp.ViewModels.InvoiceItemsViewModel
+
+@{
+    ViewData["Title"] = "Add invoice item";
+}
+
+<h2>Add invoice item</h2>
+
+<form asp-action="Create" class="form-horizontal form-label-left">
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" type="text" class="form-control">
+            <span asp-validation-for="Name"></span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Amount"></label>
+            <input asp-for="Amount" type="text" class="form-control">
+            <span asp-validation-for="Amount"></span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Quantity"></label>
+            <input asp-for="Quantity" type="text" class="form-control">
+            <span asp-validation-for="Quantity"></span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Unit"></label>
+            <input asp-for="Unit" type="text" class="form-control">
+        </div>
+    </div>
+
+    <input asp-for="InvoiceId" type="hidden" />
+
+    <div class="row form-group" style="margin-top: 30px;">
+        <div class="col-md-6 col-xs-6 text-left">
+            <a asp-action="Edit" asp-controller="Invoices" asp-route-id="@Model.InvoiceId" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                Return
+            </a>
+        </div>
+        <div class="col-md-6 col-xs-6 text-right">
+            <button type="submit" class="btn btn-success">Add invoice item</button>
+        </div>
+    </div>
+</form>

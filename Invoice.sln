@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice.WebApp", "Invoice.WebApp\Invoice.WebApp.csproj", "{462C9E52-7504-405A-8FEE-10B0CCB4DE24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice.DataAccess", "Invoice.DataAccess\Invoice.DataAccess.csproj", "{2433C7D7-AC42-41F3-B7EE-C8E774EA753B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice.BL", "Invoice.BL\Invoice.BL.csproj", "{1AEA23CB-88AF-46C5-9368-C56D5BB68B13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice.API", "Invoice.API\Invoice.API.csproj", "{6B3CC397-9D0C-4A17-A145-78D3470054D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice.GraphQL", "Invoice.GraphQL\Invoice.GraphQL.csproj", "{96A3AD4B-9859-4046-8288-CB34C0FB7AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.GraphQL.EF", "Invoice.GraphQL.EF\Invoice.GraphQL.EF.csproj", "{49C71055-8922-4612-A6C5-7482FD7B0380}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{462C9E52-7504-405A-8FEE-10B0CCB4DE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462C9E52-7504-405A-8FEE-10B0CCB4DE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462C9E52-7504-405A-8FEE-10B0CCB4DE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462C9E52-7504-405A-8FEE-10B0CCB4DE24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2433C7D7-AC42-41F3-B7EE-C8E774EA753B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2433C7D7-AC42-41F3-B7EE-C8E774EA753B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2433C7D7-AC42-41F3-B7EE-C8E774EA753B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2433C7D7-AC42-41F3-B7EE-C8E774EA753B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AEA23CB-88AF-46C5-9368-C56D5BB68B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AEA23CB-88AF-46C5-9368-C56D5BB68B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AEA23CB-88AF-46C5-9368-C56D5BB68B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AEA23CB-88AF-46C5-9368-C56D5BB68B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B3CC397-9D0C-4A17-A145-78D3470054D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3CC397-9D0C-4A17-A145-78D3470054D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3CC397-9D0C-4A17-A145-78D3470054D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3CC397-9D0C-4A17-A145-78D3470054D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A3AD4B-9859-4046-8288-CB34C0FB7AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A3AD4B-9859-4046-8288-CB34C0FB7AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A3AD4B-9859-4046-8288-CB34C0FB7AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A3AD4B-9859-4046-8288-CB34C0FB7AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49C71055-8922-4612-A6C5-7482FD7B0380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C71055-8922-4612-A6C5-7482FD7B0380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C71055-8922-4612-A6C5-7482FD7B0380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C71055-8922-4612-A6C5-7482FD7B0380}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E67961C3-B0D5-42B3-BBEE-183486177EE1}
+	EndGlobalSection
+EndGlobal

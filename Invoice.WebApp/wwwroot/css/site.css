@@ -1,0 +1,164 @@
+﻿:root {
+    --placeholder-color: #a8a8a8;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+#header {
+    border-bottom: .5px solid #eaeaea;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+#header .logo-icon {
+    font-size: 50px;
+    transform: scaleX(-1);
+    color: #337ab7;
+    margin-right: 5px;
+}
+
+#header h1 {
+    display: inline-block;
+}
+
+#header span.large-i {
+    font-size: 52px;
+}
+
+#header a {
+    color: inherit;
+}
+
+    #header a:hover {
+        text-decoration: none;
+    }
+
+.page-frame {
+    min-height: 480px;
+    padding: 20px 0 40px 0;
+    -webkit-box-shadow: 1px 2px 11px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 2px 11px 0px rgba(0,0,0,0.25);
+    box-shadow: 1px 2px 11px 0px rgba(0,0,0,0.25);
+}
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/* Tables */
+
+.table label {
+    margin: 0;
+}
+
+.table thead a {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.table thead h2, .table thead h3 {
+    margin-bottom: 5px;
+}
+
+.table.table-bordered {
+    border: none;
+}
+
+.table tr.borderless th, .table tr.borderless td {
+    border: none;
+}
+
+
+/* Forms */
+label {
+    font-weight: 500;
+}
+
+.input-validation-error {
+    border-color: red;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+form.delete-form {
+    display: inline;
+}
+
+.form-control {
+    border-width: .5px !important;
+}
+
+.btn {
+    border-width: .5px !important;
+}
+
+.btn-link {
+    padding: 0;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--placeholder-color) !important;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--placeholder-color) !important;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: var(--placeholder-color) !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: var(--placeholder-color) !important;
+}

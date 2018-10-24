@@ -1,0 +1,67 @@
+﻿@model Invoice.WebApp.ViewModels.InvoicesViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create invoice</h2>
+
+<form asp-controller="Invoices" asp-action="Create" class="form-horizontal form-label-left">
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" type="text" class="form-control">
+            <span asp-validation-for="Description"></span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="DueDate"></label>
+            <input asp-for="DueDate" type="text" class="form-control">
+            <span asp-validation-for="DueDate"></span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <label asp-for="Partner"></label>
+            @Html.DropDownListFor(model => model.PartnerId, new SelectList(ViewBag.Partners, "Id", "Name"), new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-4 col-xs-12">
+            <label asp-for="PaymentType"></label>
+            @Html.DropDownListFor(x => x.PaymentType,
+                     new SelectList(Enum.GetNames(typeof(Invoice.BL.Models.PaymentType))),
+                     new { @class = "form-control" }
+                 )
+        </div>
+        <div class="col-md-4 col-xs-12">
+            <label asp-for="BankAccount"></label>
+            <input asp-for="BankAccount" type="text" class="form-control">
+            <span asp-validation-for="BankAccount"></span>
+        </div>
+        <div class="col-md-4 col-xs-12">
+            <label asp-for="PaymentStatus"></label>
+            @Html.DropDownListFor(x => x.PaymentStatus,
+                     new SelectList(Enum.GetNames(typeof(Invoice.BL.Models.PaymentStatus))),
+                     new { @class = "form-control" }
+                 )
+        </div>
+    </div>
+
+    <div class="row form-group" style="margin-top: 30px;">
+        <div class="col-md-6 col-xs-6 text-left">
+            <a asp-action="Index" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                Return
+            </a>
+        </div>
+        <div class="col-md-6 col-xs-6 text-right">
+            <button type="submit" class="btn btn-success">Add invoice</button>
+        </div>
+    </div>
+</form>

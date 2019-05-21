@@ -30,9 +30,11 @@ namespace Invoice.WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=InvoiceDB;Trusted_Connection=True;";
-            services.AddDbContext<InvoiceDbContext>(options => options.UseSqlServer(connection));
-            services.AddMvc().AddFluentValidation();
+            services.AddDbContext<InvoiceDbContext>(
+                options => options.UseInMemoryDatabase("invoice")
+            );
+            services.AddMvc()
+                    .AddFluentValidation();
 
             // Data access services
             services.AddTransient<IInvoiceService, InvoiceService>();
